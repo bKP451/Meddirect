@@ -127,6 +127,7 @@ if(isset($_GET["pageno"])){
 	//var max_count = <?php echo $product_array['product_count']; ?>
 	//alert(max_count);
     $('[data-quantity="plus"]').click(function(e){
+      $("footer").hide()
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
@@ -138,8 +139,10 @@ if(isset($_GET["pageno"])){
             // Increment
 			if(currentVal+1 <= max_count)
 			{
+        
             $('input[name='+fieldName+']').val(currentVal + 1);}
 		else
+      
 			$(this).attr('disabled','disabled');
         } else {
             // Otherwise put a 0 there

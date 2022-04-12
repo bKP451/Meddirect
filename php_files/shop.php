@@ -68,10 +68,12 @@ if(isset($_GET["pageno"])){
 					}
 
           $sql=mysqli_query($con, "SELECT * FROM category where category_status='1'");
-
-					if(mysqli_num_rows($sql)){
+          
+					if(mysqli_num_rows($sql))
+        
+          {
 					while($product_array=mysqli_fetch_array($sql)){
-                    
+                   
                  
                     ?>
                     <div class="list-group-item checkbox">

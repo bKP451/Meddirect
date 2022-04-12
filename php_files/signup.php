@@ -45,7 +45,7 @@ if(isset($_GET["pageno"])){
 		 ?>
           <div class="col-md-7">
 
-            <form id="login" class="form-container" method="post">
+            <form id="login" action="login.php" class="form-container" method="post">
               
               <div class="p-lg-5 border">
 				  <div class="text-center">
@@ -83,7 +83,7 @@ if(isset($_GET["pageno"])){
 					<div class="text-center">
 						<h2 class="h3 mb-3 text-black">Sign Up!</h2>
 					</div>
-				  <form id = "signup" class="form-container" method="post">
+				  <form id = "signup" action="register.php" class="form-container" method="post">
 					<p>Password requirement : at least 1 digit, 1 Uppercase, 1 lower case, 1 special character. It should have 8 characters.</p>
 					<div>
 						<label for="name" class="text-black">Name <span class="text-danger">*</span></label>

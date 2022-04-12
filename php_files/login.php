@@ -12,6 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_SESSION["email_login"]))
 	
 	 if($row = mysqli_fetch_assoc($resultset)){		
 		if(password_verify($password ,$row['password'])){ 
+		//   if($password == $row['password']){
 		  $_SESSION['email_login']=$row['email'];
 		  echo "success";
 		}
