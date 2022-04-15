@@ -38,7 +38,6 @@ else {
 			<li class="list-group-item"><a href="index(1).php?view_products">View Products</a></li>
 			<li class="list-group-item"><a href="index(1).php?insert_cat">Insert New Category</a></li>
 			<li class="list-group-item"><a href="index(1).php?view_cats">View All Categories</a></li>
-			<li class="list-group-item"><a href="index(1).php?view_customers">View Customers</a></li>
 			<li class="list-group-item"><a href="index(1).php?view_orders">View Orders</a></li>
 			<li class="list-group-item"><a href="index(1).php?view_deal">View Deals</a></li>
 			<li class="list-group-item"><a href="index(1).php?insert_deal">Insert Deals</a></li>
@@ -81,10 +80,6 @@ else {
 				}
 
 			
-				else if(isset($_GET['view_customers'])){
-					include("view_customers.php");
-				}
-				
 				else if(isset($_GET['insert_deal'])){
 					include("insert_deal.php");
 				}

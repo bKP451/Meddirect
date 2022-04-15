@@ -98,6 +98,7 @@ if(isset($_GET["pageno"])){
 			$sql=mysqli_query($con, "SELECT p.product_image, p.product_name, p.product_cost, p.product_count, c.quantity, p.product_id FROM product p inner join cart c ON c.product_id = p.product_id where p.product_id in (SELECT product_id FROM cart WHERE user_email='$email_login' and checkedout=0)");
 			if(mysqli_num_rows($sql)){
 					while($product_array=mysqli_fetch_array($sql)){
+            
 			?>
                   <tr>
                     <td class="product-thumbnail">
@@ -122,6 +123,8 @@ if(isset($_GET["pageno"])){
 							<button class="btn btn-outline-primary js-btn-plus" data-quantity="plus" type="button" data-field="<?php echo $product_array["product_id"];?>">&plus;</button>
 						  </div>
 						</div>
+              
+            
 
 						</div>
                     </td>
@@ -228,6 +231,7 @@ if(isset($_GET["pageno"])){
                   if(currentVal+1 <= max_count)
                   {
                     $('input[name=quantity-'+fieldName+']').val(currentVal + 1);
+    
                     $('input[name=product_count-'+fieldName+']').val(max_count - currentVal-1);
                   }
                   else
