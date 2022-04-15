@@ -154,7 +154,7 @@ if(isset($_GET["pageno"])){
 							$total_cost += $product_array['product_cost'] * $product_array['quantity'];
 						?>
                         
-						<td>$<?php echo $product_array['product_cost'] * $product_array['quantity']; ?>.00</td>
+						<td>Rs <?php echo $product_array['product_cost'] * $product_array['quantity']; ?>.00</td>
                       </tr>
 				<?php
 						}
@@ -164,7 +164,7 @@ if(isset($_GET["pageno"])){
 					  </tbody>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">$<?php echo $total_cost; ?></td>
+                        <td class="text-black">Rs <?php echo $total_cost; ?></td>
                       </tr>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
@@ -172,37 +172,54 @@ if(isset($_GET["pageno"])){
 							if(isset($_SESSION["coupon_cost"])){
 						?>
 						
-                        <td id="discount" class="text-black font-weight-bold"><strong>$<?php echo $total_cost - $_SESSION["coupon_cost"] ?></strong></td>
+                        <td id="discount" class="text-black font-weight-bold"><strong>Rs <?php echo $total_cost - $_SESSION["coupon_cost"] ?></strong></td>
 						<?php
 							}
 							else{
 						?>
-						<td id="discount" class="text-black font-weight-bold"><strong>$<?php echo $total_cost ?></strong></td>
+						<td id="discount" class="text-black font-weight-bold"><strong>Rs<?php echo $total_cost ?></strong></td>
 						<?php
 							}
 						?>
                       </tr>
                   </table>
-                  <div class="border p-3 mb-3">
-					<button class="accordion">Direct Bank Transfer</button>
-                      <div class="panel">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                  </div>
-
-                  <div class="border p-3 mb-3">
-                    <button class="accordion">Cheque Payment</button>
-                      <div class="panel">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                  </div>
-
-                  <div class="border p-3 mb-5">
-                    <button class="accordion">Paypal</button>
-                      <div class="panel">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                  </div>
+				  <div class="accordion" id="accordionExample">
+				  <div class="accordion-item">
+       <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Direct Bank Transfer
+      </button>
+       </h2>
+         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+	  Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.
+          </div>
+  </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Cheque Payment
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+	  Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.
+          </div>
+  </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+       Paypal
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.    </div>
+  </div>
+  </div>
+				  </div>
 
                   <div class="form-group">
                     <button onclick="place_order()" class="btn btn-primary btn-lg py-3 btn-block">Place Order</button>
@@ -210,7 +227,7 @@ if(isset($_GET["pageno"])){
                   </div>
 
                 </div>
-              </div>
+              
             </div>
 
           </div>
@@ -427,6 +444,7 @@ if(isset($_GET["pageno"])){
 			phone_flag = false;
 		}
 		
+		console.log(postal_flag)
 		if(fname_flag && lname_flag && postal_flag && address_flag && phone_flag && email_flag && state_flag){
 			$.ajax({
 				url:"place_order.php",

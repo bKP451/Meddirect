@@ -30,7 +30,9 @@
 		$c_lname = $row_c['lname'];
 		$c_email = $row_c['email'];
 		$c_total = $row_c['total'];
-		$total += substr($c_total, 1);
+		// $total += substr(strval($c_total), 1);
+		$numbers = preg_replace('/[^0-9]/', '', $c_total);
+		$total += $numbers;
 		$i++;
 	
 	?>
@@ -44,7 +46,7 @@
 	<?php } ?>
 	<tr align="center" bgcolor="skyblue">
 		<th colspan="4">Total</th>
-		<th>$<?php echo $total; ?></th>
+		<th>Rs<?php echo $total;?></th>
 	</tr>
 </table>
 

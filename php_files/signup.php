@@ -68,7 +68,7 @@ if(isset($_GET["pageno"])){
                 </div>	
 				  <div class="form-group row"> 
 					<div class="col-md-12">
-					  <button type="submit" class="btn">Submit</button>
+					  <button type="submit" class="btn btn-sm btn-primary">Submit</button>
 					</div>
 				  </div>
 				  
@@ -105,7 +105,7 @@ if(isset($_GET["pageno"])){
 						<input type="text" placeholder="Enter Phone Number" id="phone" name="phone">
 						<span id="phone_span"></span><br />
 					</div>
-					<button type="submit" class="btn">Submit</button>	
+					<button type="submit" class="btn btn-sm btn-primary">Submit</button>	
 				  </form>
 				  </div>
           </div>

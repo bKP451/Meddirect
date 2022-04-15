@@ -5,6 +5,8 @@ if(isset($_SESSION['user_email'])){
 	unset($_SESSION["user_email"]);
 }
 
-echo "<script>window.open('login.php','_self')</script>";
+
+header("Location: login(1).php");
+// echo "<script>window.open('login.php','_self')</script>";
 
 ?>

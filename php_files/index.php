@@ -30,8 +30,8 @@ if(isset($_GET["pageno"])){
       <div class="container">
         <div class="row">
           <div class="col-md-5">
-            <h1 class="mb-2">Purchase Prescription Drugs Online</h1>
-              <p class="mb-4">DrugsDirect is completely committed to providing quality when it comes to your prescription medications. </p>
+            <h1 class="mb-2">Purchase Prescription Med Online</h1>
+              <p class="mb-4">MedDirect is completely committed to providing quality when it comes to your prescription medications. </p>
               <p>
                 <a href="shop.php" class="btn btn-sm btn-primary">Shop Now</a>
               </p>
@@ -54,7 +54,7 @@ if(isset($_GET["pageno"])){
             <img src="images/cover_pic.jpg" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 justify-content-center">
-            <p>DrugsDirect pharmacists are unique because they understand the importance of personalized care. On top of receiving a comprehensive education needed to meet state licensing requirements, all our pharmacists are professionally certified to provide immunizations. What sets our pharmacists apart from the rest are their daily interactions with you, our customers. Because at DrugsDirect, we care.</p>
+            <p>MedDirect pharmacists are unique because they understand the importance of personalized care. On top of receiving a comprehensive education needed to meet state licensing requirements, all our pharmacists are professionally certified to provide immunizations. What sets our pharmacists apart from the rest are their daily interactions with you, our customers. Because at MedDirect, we care.</p>
             <p><a href="about.php" class="btn btn-primary btn-sm">Know more</a></p>
           </div>
         </div>
@@ -70,7 +70,7 @@ if(isset($_GET["pageno"])){
 				  <i class="fa fa-truck" aria-hidden="true"></i>
 				</div>
 				<h3>Free Shipping</h3>
-				<p>DrugsDirect Offers Free Shipping with No Minimum</p>
+				<p>MedDirect Offers Free Shipping with No Minimum</p>
 			  </div>
 			</div>
 			<div class="col-lg-6">
@@ -114,7 +114,7 @@ if(isset($_GET["pageno"])){
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-      You will need to contact your local DrugsDirect pharmacy to see if your prescription is ready. My Pharmacy members can also see if their prescription is ready by logging in to their account and/or signing up to receive prescription reminders via email or text message.
+      You will need to contact your local MedDirect pharmacy to see if your prescription is ready. My Pharmacy members can also see if their prescription is ready by logging in to their account and/or signing up to receive prescription reminders via email or text message.
   </div>
     </div>
   </div>
@@ -133,12 +133,12 @@ if(isset($_GET["pageno"])){
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Does DrugsDirect carry a particular product ?
+        Does MedDirect carry a particular product ?
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-      You will need to contact your local DrugsDirect store for inventory information. If the product is not in stock, the pharmacist may be able to place a special order.</div>
+      You will need to contact your local MedDirect store for inventory information. If the product is not in stock, the pharmacist may be able to place a special order.</div>
     </div>
   </div>
 </div>

@@ -67,23 +67,22 @@ if(isset($_GET["pageno"])){
               <p><strong class="text-primary h4">Rs <?php echo $product_array['product_cost']; ?></strong></p>
               
               <div class="mb-5">
-                  <div class="input-group mb-3" style="max-width: 120px;">
-                  <div class="input-group-prepend">
-                    <button type="button" class="btn btn-outline-primary js-btn-minus" data-quantity="minus" data-field="quantity" >&minus;</button>
-                  </div>
-                  <input class="form-control text-center" name="quantity" value="1"  placeholder="" >
+              <div class="input-group mb-3" style="max-width: 120px;">
+						  <div class="input-group-prepend">
+							<button type="button" class="btn btn-outline-primary js-btn-minus" data-quantity="minus" data-field="<?php echo $product_array["product_id"];?>" >&minus;</button>
+						  </div>
+              <input class="form-control text-center" name="quantity" value="1"  placeholder="" >
                   
                   <input type="hidden" name="product_id" value="<?php echo $product_array["product_id"]; ?>"/>
+						  <div class="input-group-append">
+							<button class="btn btn-outline-primary js-btn-plus" data-quantity="plus" type="button" data-field="<?php echo $product_array["product_id"];?>">&plus;</button>
+						  </div>
+						</div>
 
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-primary js-btn-plus" data-quantity="plus" type="button" data-field="quantity">&plus;</button>
-                  </div>
-                
-              </div>
 
               </div>
         
-        <!-- <script>
+        <!--<script>
         function geturl()
         {
           
@@ -92,7 +91,7 @@ if(isset($_GET["pageno"])){
         img.href = "cart.php?product_id=<?php echo $product_array["product_id"]; ?>&quantity=" +product_quantity;
         }
         </script> -->
-              <p><button type="submit" id="pass-url" onclick = "geturl()" class="buy-now btn btn-sm btn-primary">Add To Cart</button></p>
+              <p><button type="submit" id="pass-url" onclick = geturl class="buy-now btn btn-sm btn-primary">Add To Cart</button></p>
             </div>
           </div>
         </form>
@@ -124,7 +123,7 @@ if(isset($_GET["pageno"])){
   <script>
   jQuery(document).ready(function(){
     // This button will increment the value
-	//var max_count = <?php echo $product_array['product_count']; ?>
+	//var max_count = 
 	//alert(max_count);
     $('[data-quantity="plus"]').click(function(e){
       $("footer").hide()
@@ -132,15 +131,17 @@ if(isset($_GET["pageno"])){
         e.preventDefault();
         // Get the field name
         fieldName = $(this).attr('data-field');
+        
         // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentVal = parseInt($('input[name="quantity"]').val());
+        console.log(currentVal);
         // If is not undefined
         if (!isNaN(currentVal)) {
             // Increment
 			if(currentVal+1 <= max_count)
 			{
         
-            $('input[name='+fieldName+']').val(currentVal + 1);}
+            $('input[name="quantity"]').val(currentVal + 1);}
 		else
       
 			$(this).attr('disabled','disabled');
@@ -157,14 +158,14 @@ if(isset($_GET["pageno"])){
         // Get the field name
         fieldName = $(this).attr('data-field');
         // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentVal = parseInt($('input[name="quantity"]').val());
         // If it isn't undefined or its greater than 0
         if (!isNaN(currentVal) && currentVal > 1) {
             // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 1);
+            $('input[name="quantity"]').val(currentVal - 1);
         } else {
             // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(1);
+            $('input[name="quantity"]').val(1);
         }
     });
 });

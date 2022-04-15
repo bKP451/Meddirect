@@ -25,12 +25,14 @@
                 <div class="block-4 text-center border">
                   <figure class="block-4-image"> 
 				 
-                   <a><img src="product_images/<?php echo $pro_image;?>"  width = "200" height ="200" ></a> 
+                   <a><img src="admin/product_images/<?php echo $pro_image;?>"  width = "200" height ="200" ></a> 
                   </figure>
 				  <div class="block-4-text p-4">
 				  <h3><?php echo $pro_name;?></h3>
-                    <p class="text-primary font-weight-bold">$<?php echo $pro_cost;?></p>
-					<a class="btn btn-sm btn-primary" href="index.php?edit_pro=<?php echo $pro_id; ?>">Edit</a>
+                    <p class="text-primary font-weight-bold">Rs<?php echo $pro_cost;?></p>
+					
+			       <a class="btn btn-sm btn-primary" href="index(1).php?edit_pro=<?php echo $pro_id; ?>">Edit </a>
+			
 					<a class="btn btn-sm btn-primary" href="delete_pro.php?delete_pro=<?php echo $pro_id;?>">Delete</a>
                   </div>
                 </div>

@@ -36,7 +36,9 @@ if(isset($_GET["pageno"])){
         </div>
       </div>
     </div>  
-
+    <div class="text-center">
+            <img src="images/about_pic.jpg" class="img-fluid rounded">
+          </div>
     <div class="site-section block-8">
       <div class="container">
         <div class="row justify-content-center  mb-5">
@@ -46,7 +48,7 @@ if(isset($_GET["pageno"])){
         </div>
         <div class="row align-items-center">
           <div class="col-lg-12 col-lg-5 pl-md-5">
-		  <p>DrugsDirect pharmacists do much more than dispense prescriptions. Your pharmacist can help you and your family stay healthy by:</p>
+		  <p>MedDirect pharmacists do much more than dispense prescriptions. Your pharmacist can help you and your family stay healthy by:</p>
       <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -101,7 +103,7 @@ if(isset($_GET["pageno"])){
       </div>
 			
 			
-		  <h4>So be sure to talk to your DrugsDirect pharmacist today. The better they know you, the better they can help serve you and your needs.</h4>
+		  <h4>So be sure to talk to your MedDirect pharmacist today. The better they know you, the better they can help serve you and your needs.</h4>
           </div>
         </div>
       </div>

@@ -23,6 +23,7 @@
         </li>
             
       </ul>
+      <a class="navbar-brand" href="login(1).php">Admin</a>
       <a class="navbar-brand" href="about.php">About</a>
       <form class="d-flex" action="shop.php">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query" value="<?php echo $search_query;?>">

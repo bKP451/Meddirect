@@ -106,7 +106,7 @@ if(isset($_GET["pageno"])){
                     <td class="product-name">
                       <h2 class="h5 text-black"><?php echo $product_array['product_name']; ?></h2>
                     </td>
-					<td>$<?php echo $product_array['product_cost']; ?></td>
+					<td>Rs<?php echo $product_array['product_cost']; ?></td>
                     
                     <td>
                         <div class="product-thumbnail">
@@ -117,14 +117,15 @@ if(isset($_GET["pageno"])){
               <input class="form-control text-center" name="quantity-<?php echo $product_array["product_id"];?>" value=<?php echo $product_array["quantity"]; ?>  placeholder="" >
               <input type="hidden" name="product_count-<?php echo $product_array["product_id"];?>" value="<?php echo $product_array["product_count"];?>"/>
               <input type="hidden" name="product_id-<?php echo $product_array["product_id"];?>" value="<?php echo $product_array["product_id"];?>"/>
-						  <div class="input-group-append">
+				
+              <div class="input-group-append">
 							<button class="btn btn-outline-primary js-btn-plus" data-quantity="plus" type="button" data-field="<?php echo $product_array["product_id"];?>">&plus;</button>
 						  </div>
 						</div>
 
 						</div>
                     </td>
-                    <td><?php echo "$";echo $product_array["quantity"]*$product_array['product_cost']; $cart_total+=$product_array["quantity"]*$product_array['product_cost'] ?></td>
+                    <td><?php echo "Rs";echo $product_array["quantity"]*$product_array['product_cost']; $cart_total+=$product_array["quantity"]*$product_array['product_cost'] ?></td>
                     <td><a href="#" class="btn btn-primary btn-sm" onClick="removeProduct(<?php echo $product_array["product_id"] ?>)">X</a></td>
                   </tr>
                       <?php
@@ -163,7 +164,7 @@ if(isset($_GET["pageno"])){
                     <span class="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$<?php echo $cart_total;?></strong>
+                    <strong class="text-black">Rs<?php echo $cart_total;?></strong>
                   </div>
                 </div>
 

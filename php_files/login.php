@@ -14,15 +14,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_SESSION["email_login"]))
 		if(password_verify($password ,$row['password'])){ 
 		//   if($password == $row['password']){
 		  $_SESSION['email_login']=$row['email'];
-		  echo "success";
+		  header("Location: shop.php"); 
+		  echo '<script>Success</script>';
+		  
 		}
 		 else
 		 {
-		  echo "Invalid credentials. Please try again.";
+		   echo '<script>Invalid username  or password </script>';
 		 }
 	 }
 	 else
-		 echo "Invalid credentials. Please try again.";
+	     echo  "invalid credentials";
+		 //echo '<script>Invalid username  or password </script>';
 	 exit();
 }
 if(isset($_SESSION["email_login"])){

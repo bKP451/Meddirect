@@ -1,5 +1,9 @@
 <?php
 session_start(); 
+$search_query = '';
+if(isset($_GET["query"])){
+  $search_query = $_GET["query"];
+}
 
 if(!isset($_SESSION['user_email'])){
 	
@@ -14,12 +18,7 @@ else {
     <title>Pharmacy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-	
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+	<?php include('styling/style.html'); ?>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/index.css">
 
@@ -29,45 +28,27 @@ else {
   <body>
   
   <div class="site-wrap">
-    <header class="site-navbar">
-      <div class="site-navbar-top">
-        <div class="container">
-          <div class="row align-items-center">
+	<?php // import navbar
+    include('styling/navbar.php'); ?>
 
-            <div class="col-6 col-md-4 order-2 order-md-1">
-              
-            </div>
-
-            <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
-              <div class="site-logo">
-                <a href="index.php" class="js-logo-clone">DrugsDirect</a>
-              </div>
-            </div>
-
-            <div class="text-right col-6 col-md-4 order-3 order-md-3">
-              <div class="site-top-icons">
-                <ul>
-                  <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span></a></li>                   
-                </ul>
-              </div> 
-            </div>
-
-          </div>
-        </div>
-      </div> 
-      <nav class="site-navigation text-md-center" role="navigation">
-          <ul class="site-menu">
-			<li><a href="index.php?insert_product">Insert New Product</a></li>
-			<li><a href="index.php?view_products">View Products</a></li>
-			<li><a href="index.php?insert_cat">Insert New Category</a></li>
-			<li><a href="index.php?view_cats">View All Categories</a></li>
-			<li><a href="index.php?view_customers">View Customers</a></li>
-			<li><a href="index.php?view_orders">View Orders</a></li>
-			<li><a href="index.php?view_deal">View Deals</a></li>
-			<li><a href="index.php?insert_deal">Insert Deals</a></li>
+      <nav>
+          <ul class="list-group">
+			  
+			<li class="list-group-item"><a href="index(1).php?insert_product">Insert New Product</a></li>
+			<li class="list-group-item"><a href="index(1).php?view_products">View Products</a></li>
+			<li class="list-group-item"><a href="index(1).php?insert_cat">Insert New Category</a></li>
+			<li class="list-group-item"><a href="index(1).php?view_cats">View All Categories</a></li>
+			<li class="list-group-item"><a href="index(1).php?view_customers">View Customers</a></li>
+			<li class="list-group-item"><a href="index(1).php?view_orders">View Orders</a></li>
+			<li class="list-group-item"><a href="index(1).php?view_deal">View Deals</a></li>
+			<li class="list-group-item"><a href="index(1).php?insert_deal">Insert Deals</a></li>
+			<li class="list-group-item"><h1><a href="logout(1).php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+<path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+</svg></a></h1>
+        </li>
           </ul>
       </nav>
-    </header>
 	
 	<div class="site-section">
       <div class="container">
