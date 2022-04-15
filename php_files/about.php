@@ -103,7 +103,7 @@ if(isset($_GET["pageno"])){
       </div>
 			
 			
-		  <h4>So be sure to talk to your MedDirect pharmacist today. The better they know you, the better they can help serve you and your needs.</h4>
+		  <h4>So be sure to talk to your Meddirect pharmacist today. The better they know you, the better they can help serve you and your needs.</h4>
           </div>
         </div>
       </div>
