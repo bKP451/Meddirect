@@ -55,14 +55,18 @@ if(isset($_GET["pageno"])){
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="email" class="text-black">Email <span class="text-danger">*</span></label>
-                    <input type="text" id = "email_login" name="email_login" placeholder="Enter email">
+					<div class="input-group mb-3">
+                    <input type="text" class="form-control" id = "email_login" name="email_login" placeholder="Enter email">
+					</div>
 					<span id="emailspan"></span><br />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="password" class="text-black">Password <span class="text-danger">*</span></label>
-                    <input type="password" id="pwd_login" name="pwd_login" placeholder="Enter password">
+					<div class="input-group mb-3">
+                    <input type="password" class="form-control" id="pwd_login" name="pwd_login" placeholder="Enter password">
+					</div>
 					<span id="passwordspan"></span><br />
                   </div>
                 </div>	
@@ -71,6 +75,8 @@ if(isset($_GET["pageno"])){
 					  <button type="submit" class="btn btn-sm btn-primary">Submit</button>
 					</div>
 				  </div>
+				  <h4>New to MedDirect : </h4> 
+				  <a href="newmember.php" class="btn btn-sm btn-danger"> Create a account </a>
 				  
               </div>
             </form>
@@ -78,43 +84,14 @@ if(isset($_GET["pageno"])){
 		  <?php
 			}
 		?>
-		  <div class="col-md-5 ml-auto">
-				<div class="p-4 border mb-3">
-					<div class="text-center">
-						<h2 class="h3 mb-3 text-black">Sign Up!</h2>
-					</div>
-				  <form id = "signup" action="register.php" class="form-container" method="post">
-					<p>Password requirement : at least 1 digit, 1 Uppercase, 1 lower case, 1 special character. It should have 8 characters.</p>
-					<div>
-						<label for="name" class="text-black">Name <span class="text-danger">*</span></label>
-						<input type="text" placeholder="Enter Name" id = "name" name="name">
-						<span id="username_span"></span><br />
-					</div>
-					<div>
-						<label for="email" class="text-black">Email <span class="text-danger">*</span></label>
-						<input type="text" placeholder="Enter Email" id = "email" name="email">
-						<span id="email_span"></span><br />
-					</div>
-					<div>
-						<label for="password" class="text-black">Password <span class="text-danger">*</span></label>
-						<input type="password" placeholder="Enter Password" id="password" name="password">
-						<span id="password_span"></span><br />
-					</div>
-					<div>
-						<label for="phone" class="text-black">Phone Number <span class="text-danger">*</span></label>
-						<input type="text" placeholder="Enter Phone Number" id="phone" name="phone">
-						<span id="phone_span"></span><br />
-					</div>
-					<button type="submit" class="btn btn-sm btn-primary">Submit</button>	
-				  </form>
-				  </div>
-          </div>
 			
           </div>
         </div>
       </div>
     </div>			
-						
+			<script>
+				$("#email_login").attr("autocomplete",  "off");
+			</script>			
       <footer class="site-footer border-top">       
           <div class="col-md-12 text-center">
             <p>
@@ -122,4 +99,5 @@ if(isset($_GET["pageno"])){
             </p>
           </div>
     </footer>
+  </body>
 </html>

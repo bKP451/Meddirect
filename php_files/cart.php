@@ -264,7 +264,10 @@ if(isset($_GET["pageno"])){
             });
         });
         </script>
-    <?php } else echo "Please login to add to cart." ?>
+    <?php } else { ?>
+      <h3>Please login </h3>
+      <a href="signup.php">Login</a>
+    <?php } ?>
       </div>
     </div>
 <footer class="site-footer border-top">       

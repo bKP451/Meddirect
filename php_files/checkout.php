@@ -222,6 +222,7 @@ if(isset($_GET["pageno"])){
 				  </div>
 
                   <div class="form-group">
+					  <hr>
                     <button onclick="place_order()" class="btn btn-primary btn-lg py-3 btn-block">Place Order</button>
 					
                   </div>
